@@ -1,8 +1,8 @@
 @import "str-to-list";
 
-$list: str-to-list("#{$user_status_for_these_groups}", "|");
+$list: str-to-list("#{$restrict_user_status_to_these_groups_only}", "|");
 
-@if $user_status_for_these_groups !="" {
+@if $restrict_user_status_to_these_groups_only !="" {
 
     .control-group.pref-user-status,
     .set-user-status {
