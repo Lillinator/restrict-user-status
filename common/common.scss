@@ -1,0 +1,6 @@
+body:not(.staff) {
+    .control-group.pref-user-status,
+    .set-user-status {
+        display: none;
+    }
+}
