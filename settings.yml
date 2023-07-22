@@ -2,4 +2,4 @@ restrict_user_status_to_these_groups_only:
   type: list
   default: ""
   description:
-    en: "Restrict user status to these groups only. Use lowercase only (ie: staff, superusers, product managers)."
+    en: "Restrict user status to these groups only (ie: staff, SuperUsers, Managers)."
