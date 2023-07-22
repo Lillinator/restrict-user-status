@@ -1,6 +1,6 @@
 @import "str-to-list";
 
-$list: str-to-list("#{$groups}", "|");
+$list: str-to-list("#{$user_status_for_these_groups}", "|");
 
 @if $user_status_for_staff_only == "true" {
     body:not(.staff) {
