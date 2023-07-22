@@ -1,11 +1,5 @@
-user_status_for_staff_only:
-  type: bool
-  default: false
-  description:
-    en: "Restrict user status to staff only."
-
-user_status_for_these_groups:
+restrict_user_status_to_these_groups_only:
   type: list
   default: ""
   description:
-    en: "Restrict user status to these groups."
+    en: "Restrict user status to these groups only. Use lowercase only (ie: staff, superusers, product managers)."

@@ -2,7 +2,7 @@
 
 $list: str-to-list("#{$user_status_for_these_groups}", "|");
 
-@if $user_status_for_staff_only =="false" {
+@if $user_status_for_these_groups !="" {
 
     .control-group.pref-user-status,
     .set-user-status {
@@ -16,16 +16,6 @@ $list: str-to-list("#{$user_status_for_these_groups}", "|");
             .set-user-status {
                 display: block;
             }
-        }
-    }
-}
-
-@if $user_status_for_staff_only =="true" {
-    body:not(.staff) {
-
-        .control-group.pref-user-status,
-        .set-user-status {
-            display: none;
         }
     }
 }
