@@ -2,13 +2,19 @@
 
 $list: str-to-list("#{$user_status_for_these_groups}", "|");
 
-@if $user_status_for_these_groups !="" {
+@if $user_status_for_staff_only =="false" {
+
+    .control-group.pref-user-status,
+    .set-user-status {
+        display: none;
+    }
+
     @each $group in $list {
-        body:not(.group-#{$group}) {
+        body.group-#{$group} {
 
             .control-group.pref-user-status,
             .set-user-status {
-                display: none;
+                display: block;
             }
         }
     }
