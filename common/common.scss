@@ -2,17 +2,6 @@
 
 $list: str-to-list("#{$user_status_for_these_groups}", "|");
 
-@if $user_status_for_staff_only =="true" {
-    body:not(.staff) {
-
-        .control-group.pref-user-status,
-        .set-user-status {
-            display: none;
-        }
-    }
-}
-
-
 @if $user_status_for_these_groups !="" {
     @each $group in $list {
         body:not(.group-#{$group}) {
@@ -21,6 +10,16 @@ $list: str-to-list("#{$user_status_for_these_groups}", "|");
             .set-user-status {
                 display: none;
             }
+        }
+    }
+}
+
+@if $user_status_for_staff_only =="true" {
+    body:not(.staff) {
+
+        .control-group.pref-user-status,
+        .set-user-status {
+            display: none;
         }
     }
 }
