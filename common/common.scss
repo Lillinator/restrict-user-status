@@ -1,4 +1,8 @@
-@if $show_user_status_for_staff_only == "true" {
+@import "str-to-list";
+
+$list: str-to-list("#{$groups}", "|");
+
+@if $user_status_for_staff_only == "true" {
     body:not(.staff) {
         .control-group.pref-user-status,
         .set-user-status {
@@ -7,11 +11,14 @@
     }
 }
 
-@if $show_user_status_for_these_groups != "" {
-    body:not(.group-#{$group) {
-        .control-group.pref-user-status,
-        .set-user-status {
-            display: none;
+
+@if $user_status_for_these_groups != "" {
+    @each $group in $list {
+        body:not(.group-#{$group) {
+            .control-group.pref-user-status,
+            .set-user-status {
+                display: none;
+            }
         }
     }
 }
