@@ -1,6 +1,17 @@
-body:not(.staff) {
-    .control-group.pref-user-status,
-    .set-user-status {
-        display: none;
+@if $show_user_status_for_staff_only == "true" {
+    body:not(.staff) {
+        .control-group.pref-user-status,
+        .set-user-status {
+            display: none;
+        }
+    }
+}
+
+@if $show_user_status_for_these_groups != "" {
+    body:not(.group-#{$group) {
+        .control-group.pref-user-status,
+        .set-user-status {
+            display: none;
+        }
     }
 }
