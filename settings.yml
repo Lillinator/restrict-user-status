@@ -1,6 +1,5 @@
 restrict_user_status_to_these_groups_only:
   type: list
-  list_type: group
   default: ""
   description:
     en: "Restrict user status to these groups only (ie: staff, SuperUsers, Managers)."
