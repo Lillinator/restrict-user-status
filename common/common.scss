@@ -14,7 +14,7 @@ $list: str-to-list("#{$restrict_user_status_to_these_groups_only}", "|");
 
             .control-group.pref-user-status,
             .set-user-status {
-                display: inline-flex;
+                display: block;
             }
         }
     }
