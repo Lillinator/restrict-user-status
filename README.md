@@ -1,2 +1,2 @@
 # Discourse restrict user status
-This component restricts the Discourse user status setup functionality to select groups, including forum staff, superusers, etc. This component will only work if you have not already enabled the user status plugin and let users fill their user status. Otherwise you may need to re-install the plugin or do a rake task on user statuses (backup first!).
+This component restricts the ability of Discourse users to set user status to select groups, including forum staff, superusers, etc. If you have already enabled the user status plugin and let users fill their user status, then you will likely need to re-install the plugin or do a rake task on user statuses to reset them all to default blank setting (backup first!).
