@@ -10,4 +10,5 @@ To bullk reset existing user statuses:
 * Enter the Rails console: rails c
 * Run the following commands:
 * UserStatus.update_all(emoji: '', description: '')
+  
 This will set the emoji and description fields to an empty string for all users, effectively resetting their statuses.
